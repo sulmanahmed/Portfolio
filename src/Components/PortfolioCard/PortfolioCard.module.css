@@ -1,0 +1,80 @@
+.portfoliocard {
+  max-width: 33%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.portfoliocard img {
+  width: 300px;
+  height: 300px;
+}
+.card_wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 22px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #ff0513;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.3s ease;
+}
+.card_wrapper:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 0.82;
+}
+.overlay_text {
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.overlay_text h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  position: relative;
+}
+.overlay_text h6 {
+  color: #fff;
+  font-size: 12px;
+  padding-left: 64px;
+  line-height: 34px;
+}
+h3::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 1px;
+  background-color: #fff;
+  top: 26%;
+  left: -17%;
+}
+
+@media only screen and (max-width: 991px) {
+  .portfoliocard {
+    max-width: 40%;
+    margin-bottom: 50px;
+  }
+  .overlay_text {
+    left: 41%;
+  }
+  .overlay_text h6 {
+    padding-left: 0px;
+  }
+}
