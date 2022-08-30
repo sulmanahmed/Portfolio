@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import style from "./Portfolio.module.css";
 import PortfolioCard from "../../Components/PortfolioCard";
-import card1 from "../../images/card1.png";
-import card2 from "../../images/card2.png";
-import card3 from "../../images/card3.png";
-import card4 from "../../images/card4.png";
-import card5 from "../../images/card5.png";
-import card6 from "../../images/card6.png";
+import Dashboard from "../../images/Dashboard.png";
+import Facebook from "../../images/Facebook.png";
+
+
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("websites");
 
   const handleAll = () => {
     setActiveTab("all");
@@ -23,6 +21,36 @@ const Portfolio = () => {
   const handleMobile = () => {
     setActiveTab("mobile");
   };
+
+  let DetailsArray = [
+    {
+      name: "Dashboard",
+      image: Dashboard,
+      description: "Key Features of an application Displaying on Dashboard.",
+    },
+    {
+      name: "Facebook Record",
+      image: Facebook,
+      description: " Facebook Records.",
+    },
+    {
+      name: "Dashboard",
+      image: Dashboard,
+      description: "Key Features of an application Displaying on Dashboard.",
+    },{
+      name: "Dashboard",
+      image: Dashboard,
+      description: "Key Features of an application Displaying on Dashboard.",
+    },{
+      name: "Dashboard",
+      image: Dashboard,
+      description: "Key Features of an application Displaying on Dashboard.",
+    },{
+      name: "Dashboard",
+      image: Dashboard,
+      description: "Key Features of an application Displaying on Dashboard.",
+    },
+  ];
   return (
     <section className={style.portfolio}>
       <div className="container">
@@ -31,67 +59,47 @@ const Portfolio = () => {
             <h1>Portfolio</h1>
             <nav>
               <ul className={style.nav_links}>
-                <li
+                {/* <li
                   className={`${activeTab === "all" ? "active" : ""}`}
                   onClick={handleAll}
                 >
                   All
-                </li>
-                <li
+                </li> */}
+                {/* <li
                   className={`${activeTab === "logo" ? "active" : ""}`}
                   onClick={handleLogo}
                 >
                   Logo
-                </li>
+                </li> */}
                 <li
                   className={`${activeTab === "websites" ? "active" : ""}`}
                   onClick={handleWebsites}
                 >
                   Websites
                 </li>
-                <li
+                {/* <li
                   className={`${activeTab === "mobile" ? "active" : ""}`}
                   onClick={handleMobile}
                 >
                   Mobile Apps
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
           {(() => {
             switch (activeTab) {
-              case "all":
-                return (
-                  <div className={style.portfolio_cards}>
-                    <PortfolioCard img={card1} />
-                    <PortfolioCard img={card2} />
-                    <PortfolioCard img={card3} />
-                    <PortfolioCard img={card4} />
-                    <PortfolioCard img={card5} />
-                    <PortfolioCard img={card6} />
-                  </div>
-                );
-              case "logo":
-                return (
-                  <div className={style.portfolio_cards}>
-                    <PortfolioCard img={card1} />
-                    <PortfolioCard img={card2} />
-                  </div>
-                );
               case "websites":
                 return (
                   <div className={style.portfolio_cards}>
-                    <PortfolioCard img={card3} />
-                    <PortfolioCard img={card4} />
+                    {DetailsArray?.map((items, index) => (
+                  
+                           <PortfolioCard items={items} key = {index}/>
+                     
+                     
+                    ))}
                   </div>
                 );
-              case "mobile":
-                return (
-                  <div className={style.portfolio_cards}>
-                    <PortfolioCard img={card5} />
-                    <PortfolioCard img={card6} />
-                  </div>
-                );
+
               default:
                 return activeTab;
             }

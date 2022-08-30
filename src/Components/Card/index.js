@@ -2,12 +2,13 @@ import React from "react";
 import style from "./Card.module.css";
 import card from "../../images/card.png";
 
-const Card = () => {
+const Card = (props) => {
+  console.log("Props", props)
   return (
     <div className={style.card_wrapper}>
-      <img src={card} alt="card" />
-      <h4>Web Design</h4>
-      <p>Get awesome design services from inkyy.com</p>
+      <img src={props?.items?.imgeIcon} alt="card" />
+      <h4>{props?.items?.name}</h4>
+      <p>{props?.items?.description}</p>
     </div>
   );
 };

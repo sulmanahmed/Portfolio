@@ -10,6 +10,8 @@
 .card_wrapper img {
   width: 50px;
   margin-bottom: 8px;
+  height: 40px;
+
 }
 .card_wrapper h4 {
   color: #fff;

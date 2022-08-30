@@ -26,26 +26,26 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-          <small>NY / +1 123456 7890 / hello@graphics.studio.com</small>
+          <small>PK / +92 3025469163 / sulmanahmed135@gmail.com</small>
           <div className={style.icons}>
-            <Link to="/">Bē</Link>
+            {/* <Link to="/">Bē</Link>
             <Link to="/">
               <SportsSoccerIcon />
-            </Link>
-            <Link to="/">
+            </Link> */}
+            {/* <Link to="/">
               <InstagramIcon />
-            </Link>
-            <Link to="/">
+            </Link> */}
+            <a href="https://www.linkedin.com/in/sulman-ahmed-awan-871962b8" target="_blank">
               <LinkedInIcon />
-            </Link>
-            <Link to="/">
+            </a>
+            {/* <Link to="/">
               <PinterestIcon />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
       <div className={style.footer_bottom}>
-        <p>Copyright © 2019 Graphics Studio | All rights reserved</p>
+        <p>Copyright © 2022 Sulman Ahmed | All rights reserved</p>
       </div>
     </section>
   );
