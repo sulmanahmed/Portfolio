@@ -52,7 +52,7 @@ const Portfolio = () => {
     },
   ];
   return (
-    <section className={style.portfolio}>
+    <section className={style.portfolio} id = "portfolio">
       <div className="container">
         <div className={style.portfolio_wrapper}>
           <div className={style.portfolio_content}>

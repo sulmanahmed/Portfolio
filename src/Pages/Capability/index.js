@@ -63,7 +63,7 @@ const Capability = () => {
 
   ]
   return (
-    <section className={style.capability}>
+    <section className={style.capability} id = "contact">
       <div className="container">
         <div className={style.capability_txt}>
           <h1>My Capabilities</h1>

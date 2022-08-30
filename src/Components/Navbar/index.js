@@ -30,19 +30,19 @@ const Navbar = () => {
               }
             >
               <li>
-                <Link to="/">About</Link>
+                <a href="#about">About</a>
               </li>
               <li>
-                <Link to="/">Portfolio</Link>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <Link to="/">Contact</Link>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
-          <Link to="/" className={style.cta}>
+          {/* <Link to="/" className={style.cta}>
             <Button text="Get Started" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

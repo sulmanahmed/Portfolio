@@ -7,7 +7,7 @@ import CV from "../../images/Sr_Reactjs_Sulman_Ahmed.pdf";
 
 const About = () => {
   return (
-    <section className={style.about}>
+    <section className={style.about} id = "about">
       <div className="container">
         <div className={style.about_wrapper}>
           <div className={style.about_content}>
