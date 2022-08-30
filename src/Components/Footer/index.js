@@ -26,7 +26,7 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-          <small>PK / +92 3025469163 / sulmanahmed135@gmail.com</small>
+          <small id = "contact">PK / +92 3025469163 / sulmanahmed135@gmail.com</small>
           <div className={style.icons}>
             {/* <Link to="/">Bē</Link>
             <Link to="/">
